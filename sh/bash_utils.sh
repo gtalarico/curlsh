@@ -9,3 +9,10 @@ assert_envs() {
         fi
     done
 }
+
+
+# Source if file present
+test -f $PWD/.env && source $PWD/.env
+
+# Activate Python venv if there
+test -f $PWD/.venv/bin/activate && source $PWD/.venv/bin/activate
